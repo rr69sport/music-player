@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./js/scripts.js"></script>
+</head>
+
+<body>
+    <header class="main-header">
+        <h1 class="title">Music Player with Audio Visualizer</h1>
+    </header>
+    <main class="main-content">
+        <div class="music-player">
+            <div class="music-player__info">
+                <h2 id="title-song" class="music-player__title-song">Adagio for Strings</h2>
+                <h3 id="artist-song" class="music-player__artist">Tiesto</h3>
+            </div>
+            <div class="music-player__controls">
+                <button id="prev" class="music-player__button music-player__button--prev">
+                    Prev
+                </button>
+                <button id="play-pause" class="music-player__button music-player__button--play-pause">
+                    Play
+                </button>
+                <button id="stop" class="music-player__button music-player__button--stop">
+                    Stop
+                </button>
+                <button id="next" class="music-player__button music-player__button--next">
+                    Next
+                </button>
+            </div>
+            <div class="music-player__visualizer">
+                <canvas class="music-player__canvas" id="canvas"></canvas>
+            </div>
+            <div class="music-player__audio">
+                <audio class="music-player__audio-element" id="audio-element">
+                    <source src="./assets/music/adagio-for-strings.mp3">
+                </audio>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+:root {
+  --red: 0;
+  --green: 188;
+  --blue: 212;
+  --alpha: .10;
+  --main-color: rgb(var(--red), var(--green), var(--blue));
+  --main-color-with-alpha: rgba(var(--red), var(--green), var(--blue), var(--alpha));
+  --dark-color: rgb(20, 20, 20);
+  --light-color: rgb(240, 240, 240);
+
+  --border: 1px solid var(--main-color);
+  --rounded: 3px;
+
+  --unit: 1rem;
+  --gap: calc(var(--unit) / 4);
+  --max-width: 450px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--light-color);
+  background-color: var(--dark-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.main-header {
+  padding: 1px;
+  text-align: center;
+}
+
+.main-content {
+  margin-right: auto;
+  margin-left: auto;
+  padding: var(--gap);
+  max-width: var(--max-width);
+}
+
+/* Music Player */
+.music-player {
+  background-color: var(--dark-color);
+}
+
+.music-player__info {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  margin-bottom: var(--gap);
+  padding: calc(var(--unit) / 2);
+  text-align: center;
+  background-color: rgb(30, 30, 30);
+}
+
+.music-player__artist {
+  max-width: 80px;
+}
+
+.music-player__title-song,
+.music-player__artist {
+  flex: 1 1 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Controls */
+.music-player__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.music-player__button {
+  flex: 1 1 0;
+  padding: var(--gap);
+  color: var(--dark-color);
+  background-color: var(--main-color);
+  border: var(--border);
+}
+
+.music-player__button--prev,
+.music-player__button--next {
+  max-width: 40px;
+}
+
+.music-player__button--play-pause {}
+
+.music-player__button--stop {
+  max-width: 100px;
+}
+
+/* Canvas */
+.music-player__visualizer {
+  margin-top: var(--gap);
+  height: 40px;
+  transform: rotateX(180deg);
+}
+
+.music-player__canvas {
+  width: 100%;
+  height: 100%;
+}
